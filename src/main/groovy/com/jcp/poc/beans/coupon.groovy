@@ -1,9 +1,21 @@
 package com.jcp.poc.beans
 
 class Coupon{
-  String offerType
-  String offerText
-  String offerDetails
-  String offerConditions
-  String offerGroup
+  String id
+  String category
+  String channel
+  Offer[] offers
+  String validity
+  String code
+  Link[] links
+  Date validFrom
+  Date validTo 
 } 
+
+class Link{
+  String name
+  String title
+  String desktopURL
+  String tabletURL
+  String mobileURL
+}
