@@ -5,6 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.builder.SpringApplicationBuilder
 import org.springframework.boot.context.web.SpringBootServletInitializer
 
+/**
+ * Added to check jenkins auto deploy :)
+ */
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
 
