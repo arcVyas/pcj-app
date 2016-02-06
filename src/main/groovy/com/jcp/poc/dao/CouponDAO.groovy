@@ -16,7 +16,7 @@ class CouponDAO{
       println "Inserted coupon"
       ret = true
     }else{
-      println "Coupon already exists"
+      println "Err:Coupon already exists"
     }
     ret
   }
