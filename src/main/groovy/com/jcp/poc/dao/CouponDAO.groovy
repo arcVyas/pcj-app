@@ -1,11 +1,9 @@
 package com.jcp.poc.dao
-import org.springframework.data.mongodb.core.MongoOperations; 
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.data.mongodb.core.query.Update;
-import com.jcp.poc.dao.mongo.Mongo
-import com.jcp.poc.beans.*
 
+import com.jcp.poc.beans.Coupon
+import com.jcp.poc.dao.mongo.Mongo
+import org.springframework.data.mongodb.core.query.Criteria
+import org.springframework.data.mongodb.core.query.Query
 
 class CouponDAO{
   
@@ -15,7 +13,7 @@ class CouponDAO{
     Query couponQry = new Query(Criteria.where("id").is(coupon.id));
     if(mongoOperation.findOne(couponQry,Coupon.class)==null){
       mongoOperation.save(coupon)
-      println "Created coupon"
+      println "Inserted coupon"
       ret = true
     }else{
       println "Coupon already exists"
