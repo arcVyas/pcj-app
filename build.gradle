@@ -11,7 +11,7 @@ buildscript {
 apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
-
+apply plugin: 'war'
 
 repositories{
 	mavenCentral()
@@ -22,6 +22,7 @@ dependencies{
 	compile 'org.springframework.boot:spring-boot-starter-web'
   compile 'org.codehaus.groovy:groovy:2.3.7'
   compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }
 
 jar{
