@@ -32,7 +32,7 @@ class CouponDAO{
       println "Updated coupon - $couponId"
       ret=true
     }else{
-      println "Coupon Id not found"
+      println "Err:Coupon Id not found"
     }
     ret
   }
