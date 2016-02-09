@@ -1,7 +1,7 @@
 package com.jcp.poc.beans
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.mapping.Document
 
 @Document(collection = "coupons")
 class Coupon{
@@ -9,10 +9,10 @@ class Coupon{
   String id
   String category
   String channel
-  Offer[] offers
+  ArrayList<Offer> offers
   String validity
   String code
-  Link[] links
+  ArrayList<Link> links
   Date validFrom
   Date validTo 
 } 
