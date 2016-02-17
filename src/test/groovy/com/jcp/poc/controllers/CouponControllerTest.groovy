@@ -1,6 +1,6 @@
 package com.jcp.poc.controllers
 
-import com.jcp.poc.CouponController
+import com.jcp.poc.controllers.CouponController
 import spock.lang.Specification
 
 /**
