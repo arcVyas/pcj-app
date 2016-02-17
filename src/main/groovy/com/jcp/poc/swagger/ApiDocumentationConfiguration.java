@@ -38,7 +38,10 @@ public class ApiDocumentationConfiguration {
                 .title("Exp Comm APIs")
                 .description("APIs exposed in JCP-DP exp comm domain")
                 .version("0.1")
-                .contact("mvyas")
+                .contact("dp: searchAndBrowse team")
+                .termsOfServiceUrl("http://jcp-dp-sb.com/terms")
+                .license("Internal use")
+                .licenseUrl("http://jcp-dp-sb/license")
                 .build();
     }
 
