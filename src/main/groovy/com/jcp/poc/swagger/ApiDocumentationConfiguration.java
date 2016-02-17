@@ -38,7 +38,7 @@ public class ApiDocumentationConfiguration {
                 .title("Exp Comm APIs")
                 .description("APIs exposed in JCP-DP exp comm domain")
                 .version("0.1")
-                .contact("vyas.mohan@gmail.com")
+                .contact("mvyas")
                 .build();
     }
 
