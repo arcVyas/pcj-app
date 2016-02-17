@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*
 import io.swagger.annotations.*
 
 @RestController
-@RequestMapping("/api")
 @CrossOrigin(origins="*")
+@RequestMapping("/api")
 @Api(value="Coupons", description="Coupons APIs")
 class CouponController {
 
