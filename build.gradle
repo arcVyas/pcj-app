@@ -68,3 +68,8 @@ jar {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.0'
 }
+
+test {
+    systemProperty "mongoDBHost", System.getProperty("mongoDBHost")
+    systemProperty "mongoDBPort", System.getProperty("mongoDBPort")
+}
