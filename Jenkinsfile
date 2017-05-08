@@ -1,5 +1,5 @@
 pipeline {
-    agent {none}
+    agent { docker 'gradle' }
     stages {
         stage('build') {
             steps {
