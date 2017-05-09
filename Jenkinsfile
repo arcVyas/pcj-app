@@ -20,7 +20,7 @@ echo $PATH'''
     }
     stage('Quality Check') {
       steps {
-        sh 'gradle sonarqube -x test'
+        sh './gradlew sonarqube -x test'
       }
     }
   }
