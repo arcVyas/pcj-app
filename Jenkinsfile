@@ -15,7 +15,7 @@ echo $PATH'''
     }
     stage('Test') {
       steps {
-        junit 'build/test-results/*.xml'
+        junit './build/test-results/*.xml'
       }
     }
     stage('Quality Check') {
