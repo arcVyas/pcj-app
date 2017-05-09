@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh '/opt/gradle/gradle-3.4.1/bin/gradle clean build'
+        sh 'gradle clean build'
       }
     }
     stage('Test') {
@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Quality Check') {
       steps {
-        sh '/opt/gradle/gradle-3.4.1/bin/gradle sonarqube -x test'
+        sh 'gradle sonarqube -x test'
       }
     }
   }
