@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        junit 'build/test-results/test/'
+        junit 'build/test-results/test/*.xml'
       }
     }
     stage('Quality Check') {
