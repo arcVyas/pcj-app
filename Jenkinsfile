@@ -4,6 +4,8 @@ pipeline {
     stage('Initiallize') {
       steps {
         echo 'Jenkins Pipeline'
+        sh '''export PATH=$PATH:$GRADLE_HOME
+echo $PATH'''
       }
     }
     stage('Build') {
