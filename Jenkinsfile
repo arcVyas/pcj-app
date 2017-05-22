@@ -45,7 +45,6 @@ echo $PATH'''
     }
     stage('Ask Approval') {
       steps {
-        slackSend(message: 'slackSend "Ready for Deployment ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"')
         input(message: 'Can I deploy?', ok: 'Go Ahead', id: '_ready')
       }
     }
