@@ -1,7 +1,6 @@
 package com.jcp.poc.controllers
 
 import com.jcp.poc.beans.Coupon
-import com.jcp.poc.beans.Coupon
 import com.jcp.poc.beans.CouponCategory
 import com.jcp.poc.exceptions.CouponAlreadyExistsException
 import com.jcp.poc.exceptions.CouponNotFoundException
