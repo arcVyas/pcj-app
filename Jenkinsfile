@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Initiallize') {
       steps {
-        slackSend(message: 'slackSend "Build started (Open)"')
+        slackSend "Build Started - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
       }
     }
     stage('Build') {
@@ -43,7 +43,7 @@ pipeline {
     }
     stage('Ask Approval') {
       steps {
-        slackSend(message: 'slackSend "Ready for Deployment (Open)"')
+        slackSend "Woohoo.. Ready for deployment - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         input(message: 'Can I deploy?', ok: 'Go Ahead', id: '_ready')
       }
     }
