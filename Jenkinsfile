@@ -43,11 +43,6 @@ echo $PATH'''
         
       }
     }
-    stage('Ask Approval') {
-      steps {
-        input(message: 'Can I deploy?', ok: 'Go Ahead', id: '_ready')
-      }
-    }
     stage('Deploy') {
       steps {
         echo 'Deployed'
