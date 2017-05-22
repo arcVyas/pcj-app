@@ -43,7 +43,7 @@ pipeline {
     }
     stage('Ask Approval') {
       steps {
-        slackSend "Woohoo.. Ready for deployment - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+        slackSend 'Woohoo.. Ready for deployment '
         input(message: 'Can I deploy?', ok: 'Go Ahead', id: '_ready')
       }
     }
