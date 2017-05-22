@@ -20,14 +20,12 @@ echo $PATH'''
     }
     stage('Quality Check') {
       steps {
-        steps {
-          script {
-            // requires SonarQube Scanner 2.8+
-            scannerHome = tool 'sonar-scanner'
-          }
-          withSonarQubeEnv('SonarQube') {
-            sh "${scannerHome}/bin/sonar-scanner"
-          }
+        script {
+          // requires SonarQube Scanner 2.8+
+          scannerHome = tool 'sonar-scanner'
+        }
+        withSonarQubeEnv('SonarQube') {
+          sh "${scannerHome}/bin/sonar-scanner"
         }
       }
     }
