@@ -20,13 +20,7 @@ echo $PATH'''
     }
     stage('Quality Check') {
       steps {
-        script {
-          // requires SonarQube Scanner 2.8+
-          scannerHome = tool 'sonar-scanner'
-        }
-        withSonarQubeEnv('SonarQube') {
-          sh "${scannerHome}/bin/sonar-scanner"
-        }
+          sh './gradlew --info sonarqube'
       }
     }
     stage('Quality Gate') {
