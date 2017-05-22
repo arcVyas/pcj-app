@@ -20,9 +20,7 @@ pipeline {
     }
     stage('Quality Check') {
       steps {
-        withSonarQubeEnv('SonarQube') {
           sh './gradlew --info sonarqube'
-        }
       }
     }
     stage('Quality Gate') {
