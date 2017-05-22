@@ -23,5 +23,10 @@ echo $PATH'''
         sh './gradlew sonarqube -x test'
       }
     }
+    stage('Quality Gate') {
+      steps {
+        waitForQualityGate()
+      }
+    }
   }
 }
