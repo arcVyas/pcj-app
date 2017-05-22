@@ -20,7 +20,9 @@ echo $PATH'''
     }
     stage('Quality Check') {
       steps {
-        sh './gradlew sonarqube -x test'
+        withSonarQubeEnv('Sonar') {
+          sh './gradlew sonarqube -x test'
+        }
       }
     }
     stage('Quality Gate') {
