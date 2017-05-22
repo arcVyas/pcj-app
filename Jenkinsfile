@@ -1,11 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Initiallize') {
+    stage('Initialize') {
       steps {
         echo 'Jenkins Pipeline'
         sh '''export PATH=$PATH:$GRADLE_HOME
-echo $PATH'''
+              echo $PATH'''
       }
     }
     stage('Build') {
@@ -20,27 +20,12 @@ echo $PATH'''
     }
     stage('Quality Check') {
       steps {
-        script {
-          // requires SonarQube Scanner 2.8+
-          scannerHome = tool 'sonar-scanner'
-        }
-        withSonarQubeEnv('SonarQube') {
-          sh "${scannerHome}/bin/sonar-scanner"
-        }
+        sh './gradlew --info sonarqube'
       }
     }
     stage('Quality Gate') {
       steps {
-        script{
-          timeout(time: 1, unit: 'HOURS') { 
-           def qg = waitForQualityGate() 
-           if (qg.status != 'OK') {
-              error "Pipeline aborted due to quality gate failure: ${qg.status}"
-           }else{
-              echo "Quality Gate status : ${qg.status}"
-           }
-          }
-        }
+        waitForQualityGate()
       }
     }
   }
