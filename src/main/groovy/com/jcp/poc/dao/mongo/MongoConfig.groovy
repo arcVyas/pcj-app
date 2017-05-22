@@ -12,8 +12,8 @@ public class MongoConfig {
 	public @Bean
 	MongoDbFactory mongoDbFactory() throws Exception {
 		def mongodb=null
-		def host = System.getProperty("mongoDBHost")
-		def port = System.getProperty("mongoDBPort")
+		def host = "localhost" //System.getProperty("mongoDBHost")
+		def port = 27017 //System.getProperty("mongoDBPort")
 		println "Reading mongoHost and port from JVM args - $host:$port"
 		if(host==null)
 			host = "localhost"

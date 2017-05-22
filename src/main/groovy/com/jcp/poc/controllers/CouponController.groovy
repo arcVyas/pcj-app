@@ -5,9 +5,10 @@ import com.jcp.poc.beans.CouponCategory
 import com.jcp.poc.exceptions.CouponAlreadyExistsException
 import com.jcp.poc.exceptions.CouponNotFoundException
 import com.jcp.poc.mgr.CouponMgr
+import io.swagger.annotations.Api
+import io.swagger.annotations.ApiOperation
+import io.swagger.annotations.ApiParam
 import org.springframework.web.bind.annotation.*
-
-import io.swagger.annotations.*
 
 @RestController
 @CrossOrigin(origins="*")

@@ -1,6 +1,6 @@
 package com.jcp.poc.controllers
 
-import com.jcp.poc.controllers.CouponController
+//import com.jcp.poc.controllers.CouponController
 import spock.lang.Specification
 
 /**
@@ -11,7 +11,7 @@ class CouponControllerTest extends Specification {
     static def coupons
 
     def setupSpec() {
-        couponCategoryList = ['STOREWIDE & SITEWIDE OFFERS', 'HOME', 'MEN\'s', 'ONLINE ONLY OFFERS', 'SERVICES']
+        couponCategoryList = ['STOREWIDE & SITEWIDE OFFERS', 'HOME', 'MENS', 'ONLINE ONLY OFFERS', 'SERVICES']
         coupons = new CouponController().getCoupons()
     }
 
