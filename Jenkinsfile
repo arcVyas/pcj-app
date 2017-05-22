@@ -3,9 +3,7 @@ pipeline {
   stages {
     stage('Initiallize') {
       steps {
-        echo 'Jenkins Pipeline'
-        sh '''export PATH=$PATH:$GRADLE_HOME
-echo $PATH'''
+        slackSend(message: 'slackSend "Build started (Open)"')
       }
     }
     stage('Build') {
@@ -45,7 +43,7 @@ echo $PATH'''
     }
     stage('Ask Approval') {
       steps {
-        slackSend(message: 'slackSend "Ready for Deployment ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"')
+        slackSend(message: 'slackSend "Ready for Deployment (Open)"')
         input(message: 'Can I deploy?', ok: 'Go Ahead', id: '_ready')
       }
     }
